@@ -1,93 +1,100 @@
-```markdown
-# Plataforma de Receitas com Next.js
+# Plataforma de Receitas
 
-Bem-vindo ao projeto de Plataforma de Receitas, desenvolvido com Next.js! Este projeto permite que você compartilhe suas receitas favoritas e se conecte com outros amantes de comida.
+Uma plataforma de comida onde você pode compartilhar suas receitas favoritas e se conectar com outros amantes de comida.
+
+## Visão Geral
+
+Este é um projeto Next.js criado para permitir que os usuários compartilhem suas receitas e se conectem com outros entusiastas da culinária. Ele utiliza funcionalidades avançadas do Next.js, como renderização no lado do servidor (SSR), rotas dinâmicas e metadados dinâmicos, e foi projetado para oferecer uma experiência de usuário interativa e otimizada.
 
 ## Funcionalidades
 
 - **App Router**: Definição de rotas utilizando o sistema de arquivos do Next.js.
 - **Arquivos Especiais**:
-  - `not-found.jsx`: Para tratamento de rotas não encontradas.
-  - `error.jsx`: Para tratamento de erros na execução da página.
-  - `layout.jsx`: Layout global da plataforma.
-- **SSR (Server-Side Rendering)**: Renderização no lado do servidor para melhor desempenho e SEO.
+  - `not-found.jsx` para tratamento de rotas não encontradas.
+  - `error.jsx` para tratamento de erros na execução da página.
+  - `layout.jsx` para layout global da plataforma.
+- **SSR (Server-Side Rendering)**: Renderização no lado do servidor para melhorar desempenho e SEO.
 - **Rotas Dinâmicas**: Criação de páginas dinâmicas baseadas em dados do banco de dados.
-- **Metadados**: Uso de campos de metadados como title e description.
+- **Metadados**: Uso de campos de metadados como title e description, incluindo metadados dinâmicos para rotas.
 - **Hooks**:
-  - `useActionState` (antigo `useFormState`): Para gerenciamento de estado do formulário e validação.
-  - `useFormStatus`: Para verificar o status do envio do formulário.
-- **Redirect**: Redirecionamento após a conclusão do formulário.
-- **Cache e Revalidação**: Utilização de 'revalidatePath' para garantir que novas refeições apareçam corretamente.
+  - `useActionState` (antigo `useFormState`): Gerenciamento de estado e validação do formulário.
+  - `useFormStatus`: Verificação do status do envio do formulário.
+- **Componente Redirect**: Redirecionamento após a conclusão do formulário.
+- **Cache e Revalidação**: Uso de 'revalidatePath' para atualizar as páginas com novos dados.
 
 ## Requisitos
 
-- Node.js (versão 16 ou superior)
-- npm (ou yarn)
+- Node.js (versão recomendada: 16.x ou superior)
+- npm (versão recomendada: 7.x ou superior) ou yarn (versão recomendada: 1.x ou superior)
 
-## Instalação
+## Configuração do Ambiente
 
 1. Clone o repositório:
 
-   ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   ```
+    ```bash
+    git clone https://github.com/seu-usuario/plataforma-de-receitas.git
+    ```
 
 2. Navegue até o diretório do projeto:
 
-   ```bash
-   cd seu-repositorio
-   ```
+    ```bash
+    cd plataforma-de-receitas
+    ```
 
 3. Instale as dependências:
 
-   ```bash
-   npm install
-   # ou
-   yarn install
-   ```
+    ```bash
+    npm install
+    ```
 
-## Execução
+    ou
 
-Para rodar o projeto localmente, use o seguinte comando:
+    ```bash
+    yarn install
+    ```
 
-```bash
-npm run dev
-# ou
-yarn dev
-```
+4. Crie um arquivo `.env` na raiz do projeto e adicione as variáveis de ambiente necessárias. Por exemplo:
 
-Isso iniciará o servidor de desenvolvimento no [http://localhost:3000](http://localhost:3000).
+    ```env
+    DATABASE_URL=your-database-url
+    API_KEY=your-api-key
+    ```
 
-## Construção para Produção
+## Scripts Disponíveis
 
-Para criar uma versão de produção do projeto, utilize:
+No diretório do projeto, você pode executar:
 
-```bash
-npm run build
-# ou
-yarn build
-```
+### `npm run dev` ou `yarn dev`
 
-Para iniciar o servidor de produção, use:
+Roda a aplicação em modo de desenvolvimento.\
+Abra [http://localhost:3000](http://localhost:3000) para ver no navegador.
 
-```bash
-npm start
-# ou
-yarn start
-```
+A página irá recarregar se você fizer edições.\
+Você também verá quaisquer erros de lint no console.
 
-## Contribuição
+### `npm run build` ou `yarn build`
 
-Se você deseja contribuir para o projeto, por favor, abra uma issue ou um pull request no GitHub.
+Compila o aplicativo para produção.
+
+### `npm start` ou `yarn start`
+
+Roda o servidor de produção. Certifique-se de compilar o projeto primeiro usando `npm run build` ou `yarn build`.
+
+### `npm run lint` ou `yarn lint`
+
+Executa o linter para encontrar e corrigir problemas no código.
+
+## Estrutura do Projeto
+
+- `pages/` - Contém as páginas do aplicativo.
+- `components/` - Contém os componentes reutilizáveis.
+- `styles/` - Contém os arquivos de estilo (CSS, SCSS, etc.).
+- `public/` - Contém os recursos estáticos, como imagens e ícones.
+
+## Contribuindo
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma [issue](https://github.com/seu-usuario/plataforma-de-receitas/issues) ou enviar um [pull request](https://github.com/seu-usuario/plataforma-de-receitas/pulls).
 
 ## Licença
 
-Este projeto está licenciado sob a [MIT License](LICENSE).
-
-## Contato
-
-Para mais informações, entre em contato com [seu-email@dominio.com](mailto:seu-email@dominio.com).
-
-```
-
-Este `README.md` fornece uma visão geral clara e os passos necessários para instalar e executar seu projeto Next.js. Há algo mais que você gostaria de incluir ou ajustar no seu `README`?
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
