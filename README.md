@@ -1,5 +1,3 @@
-Aqui está um exemplo de um arquivo `README.md` para o seu projeto Next.js. Esse guia cobre o básico para rodar o projeto localmente e fornece uma visão geral das funcionalidades principais:
-
 ```markdown
 # Plataforma de Receitas com Next.js
 
