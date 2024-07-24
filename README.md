@@ -52,14 +52,7 @@ Este é um projeto Next.js criado para permitir que os usuários compartilhem su
     ```bash
     yarn install
     ```
-
-4. Crie um arquivo `.env` na raiz do projeto e adicione as variáveis de ambiente necessárias. Por exemplo:
-
-    ```env
-    DATABASE_URL=your-database-url
-    API_KEY=your-api-key
-    ```
-
+    
 ## Scripts Disponíveis
 
 No diretório do projeto, você pode executar:
